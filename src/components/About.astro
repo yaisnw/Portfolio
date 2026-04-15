@@ -1,0 +1,141 @@
+---
+---
+
+<section id="about">
+  <div class="container">
+    <p class="section-label">01 / about</p>
+    <h2 class="section-title">About me</h2>
+    <div class="grid">
+      <div class="copy">
+        <p>
+          I'm a full-stack engineer based in North Dandenong, Australia. I picked up
+          programming through <a href="https://www.codecademy.com" target="_blank" rel="noopener">Codecademy's Full-Stack Engineer</a>
+          track and have since been building projects that push me beyond tutorial-land —
+          real databases, real auth flows, real deployment headaches.
+        </p>
+        <p>
+          My most recent project is a
+          <a href="https://blogging-platform-pearl-six.vercel.app/" target="_blank" rel="noopener">blogging platform</a>
+          with a rich-text editor built on Lexical, Google OAuth, S3 image uploads, and a
+          fully typed React + Express stack. It taught me more about authentication,
+          state management, and deployment than any course ever did.
+        </p>
+        <p>Technologies I work with:</p>
+        <ul class="stack-list">
+          <li>TypeScript</li>
+          <li>React / Redux</li>
+          <li>Node.js / Express</li>
+          <li>PostgreSQL</li>
+          <li>AWS (S3, EC2)</li>
+          <li>Docker</li>
+        </ul>
+      </div>
+      <div class="portrait">
+        <div class="portrait-frame">
+          <p class="portrait-label">At a glance</p>
+          <dl class="portrait-list">
+            <div class="row"><dt>Name</dt><dd>Yasin Wafazada</dd></div>
+            <div class="row"><dt>Role</dt><dd>Full-stack engineer</dd></div>
+            <div class="row"><dt>Based in</dt><dd>Melbourne, Australia</dd></div>
+            <div class="row"><dt>Certified</dt><dd>Codecademy, 2024</dd></div>
+            <div class="row"><dt>Status</dt><dd><span class="available">Available for hire</span></dd></div>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .grid {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 3rem;
+    align-items: start;
+  }
+  .copy p { margin-bottom: 1.1rem; color: var(--fg-muted); }
+  .copy p:last-of-type { margin-bottom: 0.75rem; }
+  .stack-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.4rem 1.5rem;
+    padding: 0;
+    margin: 0.5rem 0 0;
+    list-style: none;
+  }
+  .stack-list li {
+    font-family: var(--mono);
+    font-size: 0.88rem;
+    color: var(--fg);
+    position: relative;
+    padding-left: 1.25rem;
+  }
+  .stack-list li::before {
+    content: "▸";
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+  }
+  .portrait-frame {
+    position: relative;
+    border: 1px solid var(--border-hi);
+    border-radius: 6px;
+    padding: 1.75rem;
+    background: var(--bg-alt);
+  }
+  .portrait-label {
+    font-size: 0.72rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin: 0 0 1.25rem;
+  }
+  .portrait-list {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.9rem;
+  }
+  .portrait-list .row {
+    display: grid;
+    grid-template-columns: 90px 1fr;
+    gap: 0.75rem;
+    align-items: baseline;
+  }
+  .portrait-list dt {
+    font-size: 0.78rem;
+    color: var(--fg-dim);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+  .portrait-list dd {
+    margin: 0;
+    font-size: 0.92rem;
+    color: var(--fg);
+  }
+  .portrait-frame::before {
+    content: "";
+    position: absolute;
+    inset: -6px -6px auto auto;
+    width: 40px;
+    height: 40px;
+    border-top: 1px solid var(--accent);
+    border-right: 1px solid var(--accent);
+    border-radius: 0 6px 0 0;
+  }
+  .portrait-frame::after {
+    content: "";
+    position: absolute;
+    inset: auto auto -6px -6px;
+    width: 40px;
+    height: 40px;
+    border-bottom: 1px solid var(--accent);
+    border-left: 1px solid var(--accent);
+    border-radius: 0 0 0 6px;
+  }
+  .available { color: var(--accent); font-weight: 500; }
+
+  @media (max-width: 768px) {
+    .grid { grid-template-columns: 1fr; }
+  }
+</style>

@@ -1,0 +1,79 @@
+---
+---
+
+<section id="contact">
+  <div class="container contact-box">
+    <p class="section-label">04 / contact</p>
+    <h2 class="contact-title">Let's build something.</h2>
+    <p class="contact-copy">
+      I'm open to junior and graduate full-stack roles, as well as contract work.
+      Drop me a line — I'll get back to you.
+    </p>
+    <a href="mailto:wafazadayasin@gmail.com" class="contact-btn">
+      Say hello
+    </a>
+    <div class="socials">
+      <a href="https://github.com/yaisnw" target="_blank" rel="noopener" aria-label="GitHub">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.2 11.4.6.1.82-.26.82-.58v-2c-3.34.72-4.04-1.6-4.04-1.6-.55-1.39-1.34-1.76-1.34-1.76-1.09-.75.08-.73.08-.73 1.2.08 1.84 1.23 1.84 1.23 1.07 1.84 2.81 1.31 3.5 1 .1-.78.42-1.31.76-1.61-2.66-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.13-.3-.54-1.52.12-3.18 0 0 1-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.3-1.55 3.3-1.23 3.3-1.23.66 1.66.24 2.88.12 3.18.77.84 1.23 1.91 1.23 3.22 0 4.61-2.81 5.62-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.22.69.82.57A12 12 0 0 0 24 12c0-6.63-5.37-12-12-12z" /></svg>
+      </a>
+      <a href="https://www.linkedin.com/in/yasin-wafazada-109977286/" target="_blank" rel="noopener" aria-label="LinkedIn">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14M18.5 18.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.85.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z" /></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<style>
+  .contact-box {
+    text-align: center;
+    max-width: 640px;
+  }
+  .section-label { justify-content: center; }
+  .contact-title {
+    font-size: clamp(2rem, 4vw, 3rem);
+    color: var(--fg);
+    margin-bottom: 1rem;
+  }
+  .contact-copy {
+    margin-bottom: 2.5rem;
+    color: var(--fg-muted);
+  }
+  .contact-btn {
+    display: inline-block;
+    padding: 1.1rem 2.2rem;
+    border: 1px solid var(--accent);
+    color: var(--accent);
+    border-radius: 4px;
+    background: rgba(126, 231, 135, 0.05);
+    transition: all 0.15s ease;
+  }
+  .contact-btn:hover {
+    background: rgba(126, 231, 135, 0.15);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px -8px rgba(126, 231, 135, 0.4);
+  }
+  .socials {
+    margin-top: 3rem;
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+  }
+  .socials a {
+    color: var(--fg-muted);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 4px;
+    transition: color 0.15s ease, background 0.15s ease, transform 0.15s ease;
+  }
+  .socials a:hover {
+    color: var(--accent);
+    background: rgba(126, 231, 135, 0.08);
+    transform: translateY(-3px);
+  }
+  .contact-btn {
+    min-height: 44px;
+  }
+</style>

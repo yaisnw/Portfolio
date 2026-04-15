@@ -1,0 +1,82 @@
+---
+const groups = [
+  {
+    label: "frontend",
+    items: ["TypeScript", "JavaScript", "React", "Redux Toolkit", "RTK Query", "React Router", "Lexical", "CSS Modules", "HTML / CSS", "Vite"],
+  },
+  {
+    label: "backend",
+    items: ["Node.js", "Express", "Sequelize", "REST APIs", "JWT", "Passport.js", "Google OAuth", "bcrypt"],
+  },
+  {
+    label: "data & infra",
+    items: ["PostgreSQL", "SQL", "AWS S3", "AWS EC2", "Docker", "Docker Compose", "nginx", "Git / GitHub"],
+  },
+];
+---
+
+<section id="skills">
+  <div class="container">
+    <p class="section-label">03 / skills</p>
+    <h2 class="section-title">What I work with</h2>
+    <div class="grid">
+      {groups.map((g) => (
+        <div class="group">
+          <h3 class="group-label mono">
+            <span class="bracket">[</span>{g.label}<span class="bracket">]</span>
+          </h3>
+          <ul>
+            {g.items.map((item) => <li>{item}</li>)}
+          </ul>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+  @media (max-width: 768px) {
+    .grid { grid-template-columns: 1fr; }
+  }
+  .group {
+    padding: 1.5rem;
+    background: var(--bg-alt);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    transition: border-color 0.2s ease;
+  }
+  .group:hover { border-color: var(--border-hi); }
+  .group-label {
+    color: var(--accent);
+    font-size: 0.85rem;
+    margin-bottom: 1rem;
+    font-weight: 500;
+  }
+  .bracket { color: var(--fg-dim); }
+  ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+  li {
+    font-family: var(--mono);
+    font-size: 0.85rem;
+    color: var(--fg);
+    padding-left: 1.1rem;
+    position: relative;
+  }
+  li::before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    color: var(--fg-dim);
+  }
+</style>

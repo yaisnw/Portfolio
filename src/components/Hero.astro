@@ -1,0 +1,143 @@
+---
+---
+
+<section id="top" class="hero">
+  <div class="container">
+    <p class="greeting">Hi, my name is</p>
+    <h1 class="name">Yasin Wafazada.</h1>
+    <h2 class="tagline">Full-Stack Engineer — React, TypeScript, Node.js.</h2>
+    <p class="blurb">
+      I build end-to-end web applications, from rich-text editors with real-time state
+      to REST APIs backed by PostgreSQL. Based in North Dandenong, Australia.
+    </p>
+    <div class="cta">
+      <a href="#projects" class="btn-primary">View my work</a>
+      <a href="#contact" class="btn-ghost">Get in touch</a>
+    </div>
+    <div class="currently">
+      <div class="currently-head">
+        <span class="dot" aria-hidden="true"></span>
+        <p class="currently-label">Currently building</p>
+      </div>
+      <h3 class="currently-title">ASC — Ayendah Sazan Community</h3>
+      <p class="currently-copy">
+        A client project for the Ayendah Sazan community in Leeds — event tickets,
+        event calendar, course subscriptions, and member access in one platform.
+      </p>
+      <p class="currently-meta">Private repo · In active development</p>
+    </div>
+  </div>
+</section>
+
+<style>
+  .hero {
+    padding: 8rem 0 6rem;
+    border-top: 0;
+  }
+  .greeting {
+    color: var(--accent);
+    font-size: 0.95rem;
+    margin-bottom: 1.25rem;
+    letter-spacing: 0.02em;
+  }
+  .name {
+    color: var(--fg);
+    margin-bottom: 0.5rem;
+  }
+  .tagline {
+    color: var(--fg-muted);
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+  }
+  .blurb {
+    max-width: 560px;
+    margin-bottom: 2.5rem;
+  }
+  .cta {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+  .btn-primary, .btn-ghost {
+    font-size: 0.95rem;
+    padding: 0.85rem 1.5rem;
+    border-radius: 4px;
+    transition: background 0.15s ease, border-color 0.15s ease, color 0.15s ease, transform 0.15s ease;
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+    font-weight: 500;
+  }
+  .btn-primary {
+    color: var(--bg);
+    background: var(--accent);
+    border: 1px solid var(--accent);
+  }
+  .btn-primary:hover {
+    background: #9cf0a3;
+    border-color: #9cf0a3;
+    transform: translateY(-2px);
+  }
+  .btn-ghost {
+    color: var(--fg);
+    background: transparent;
+    border: 1px solid var(--border-hi);
+  }
+  .btn-ghost:hover {
+    color: var(--accent);
+    border-color: var(--accent);
+    background: rgba(126, 231, 135, 0.06);
+  }
+  .currently {
+    margin-top: 4rem;
+    border: 1px solid var(--border-hi);
+    border-left: 2px solid var(--accent);
+    border-radius: 6px;
+    background: var(--bg-alt);
+    padding: 1.5rem 1.75rem;
+    max-width: 560px;
+    box-shadow: 0 20px 60px -20px rgba(0, 0, 0, 0.5);
+  }
+  .currently-head {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin-bottom: 0.9rem;
+  }
+  .dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--accent);
+    box-shadow: 0 0 0 4px rgba(126, 231, 135, 0.15);
+    animation: pulse 2s ease-in-out infinite;
+  }
+  .currently-label {
+    font-size: 0.78rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin: 0;
+  }
+  .currently-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--fg);
+    margin: 0 0 0.5rem;
+  }
+  .currently-copy {
+    font-size: 0.92rem;
+    color: var(--fg-muted);
+    margin: 0 0 0.8rem;
+    line-height: 1.6;
+  }
+  .currently-meta {
+    font-size: 0.8rem;
+    color: var(--fg-dim);
+    margin: 0;
+  }
+  @keyframes pulse {
+    0%, 100% { box-shadow: 0 0 0 4px rgba(126, 231, 135, 0.15); }
+    50% { box-shadow: 0 0 0 6px rgba(126, 231, 135, 0.05); }
+  }
+</style>

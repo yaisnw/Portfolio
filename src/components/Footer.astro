@@ -1,0 +1,30 @@
+---
+const year = new Date().getFullYear();
+---
+
+<footer class="footer">
+  <div class="container inner">
+    <p class="mono">
+      <span class="muted">&copy; {year}</span> Yasin Wafazada
+      <span class="muted">·</span> built with
+      <a href="https://astro.build" target="_blank" rel="noopener">Astro</a>
+    </p>
+  </div>
+</footer>
+
+<style>
+  .footer {
+    border-top: 1px solid var(--border);
+    padding: 2rem 0;
+  }
+  .inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  p { font-size: 0.82rem; color: var(--fg-muted); }
+  .muted { color: var(--fg-dim); }
+  .small { color: var(--fg-dim); }
+</style>

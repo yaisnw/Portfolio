@@ -1,0 +1,153 @@
+---
+---
+
+<header class="nav">
+  <div class="container nav-inner">
+    <a href="#top" class="logo mono" aria-label="Home">
+      <span class="logo-bracket">&lt;</span>yw<span class="logo-bracket">/&gt;</span>
+    </a>
+    <button
+      class="menu-toggle"
+      aria-label="Toggle navigation menu"
+      aria-expanded="false"
+      aria-controls="primary-nav"
+    >
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
+    <nav id="primary-nav" aria-label="Primary">
+      <ul>
+        <li><a href="#about"><span class="num">01.</span> about</a></li>
+        <li><a href="#projects"><span class="num">02.</span> projects</a></li>
+        <li><a href="#skills"><span class="num">03.</span> skills</a></li>
+        <li><a href="#contact"><span class="num">04.</span> contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<script>
+  const toggle = document.querySelector<HTMLButtonElement>(".menu-toggle");
+  const nav = document.querySelector<HTMLElement>("#primary-nav");
+  toggle?.addEventListener("click", () => {
+    const open = toggle.getAttribute("aria-expanded") === "true";
+    toggle.setAttribute("aria-expanded", String(!open));
+    nav?.classList.toggle("is-open", !open);
+    document.body.classList.toggle("nav-open", !open);
+  });
+  nav?.querySelectorAll("a").forEach((a) =>
+    a.addEventListener("click", () => {
+      toggle?.setAttribute("aria-expanded", "false");
+      nav.classList.remove("is-open");
+      document.body.classList.remove("nav-open");
+    })
+  );
+</script>
+
+<style>
+  .nav {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    backdrop-filter: blur(12px);
+    background: rgba(10, 14, 20, 0.7);
+    border-bottom: 1px solid var(--border);
+  }
+  .nav-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    min-height: 56px;
+  }
+  .logo {
+    font-family: var(--mono);
+    font-weight: 600;
+    color: var(--fg);
+    font-size: 1.05rem;
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+    padding: 0 0.25rem;
+  }
+  .logo-bracket { color: var(--accent); }
+  nav ul {
+    display: flex;
+    gap: 0.25rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  nav a {
+    font-family: var(--mono);
+    font-size: 0.88rem;
+    color: var(--fg-muted);
+    padding: 0.75rem 0.85rem;
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+    border-radius: 4px;
+    transition: color 0.15s ease, background 0.15s ease;
+  }
+  nav a:hover { color: var(--accent); background: rgba(126, 231, 135, 0.06); }
+  .num { color: var(--accent); margin-right: 0.35rem; }
+
+  .menu-toggle {
+    display: none;
+    background: transparent;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    width: 44px;
+    height: 44px;
+    cursor: pointer;
+    padding: 0;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 4px;
+  }
+  .menu-toggle:hover { border-color: var(--accent); }
+  .menu-toggle .bar {
+    display: block;
+    width: 18px;
+    height: 1.5px;
+    background: var(--fg-muted);
+    transition: transform 0.2s ease, opacity 0.2s ease;
+  }
+  .menu-toggle[aria-expanded="true"] .bar:nth-child(1) {
+    transform: translateY(5.5px) rotate(45deg);
+    background: var(--accent);
+  }
+  .menu-toggle[aria-expanded="true"] .bar:nth-child(2) { opacity: 0; }
+  .menu-toggle[aria-expanded="true"] .bar:nth-child(3) {
+    transform: translateY(-5.5px) rotate(-45deg);
+    background: var(--accent);
+  }
+
+  @media (max-width: 640px) {
+    .menu-toggle { display: inline-flex; }
+    nav {
+      position: fixed;
+      inset: 56px 0 0 0;
+      background: rgba(10, 14, 20, 0.96);
+      backdrop-filter: blur(12px);
+      padding: 1.5rem;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.2s ease, visibility 0.2s ease;
+    }
+    nav.is-open { opacity: 1; visibility: visible; }
+    nav ul {
+      flex-direction: column;
+      gap: 0.25rem;
+      align-items: stretch;
+    }
+    nav a {
+      font-size: 1rem;
+      padding: 1rem 1rem;
+      border: 1px solid var(--border);
+    }
+  }
+</style>
