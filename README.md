@@ -1,51 +1,103 @@
-# Astro Starter Kit: Minimal
+# yasin wafazada — portfolio
+
+> personal portfolio site for a full-stack engineer based in melbourne, australia.
+> built with astro, hand-written css, and a terminal-inspired aesthetic.
+
+**live:** _coming soon_ · **stack:** astro 4 · typescript · vanilla css
+
+---
+
+## about
+
+A static, zero-JavaScript-by-default portfolio designed around a coding/CLI
+motif — JetBrains Mono for accents, an OLED dark palette, and a `// 01 about`
+section-numbering pattern lifted from source-file conventions.
+
+The site favours fast load, accessible defaults, and a build-first tone over
+animation-heavy marketing-page tropes.
+
+## sections
+
+- **hero** — name, role, current build (ASC client project).
+- **about** — background, stack, "at a glance" portrait card.
+- **projects** — featured work, pulled from [`src/data/projects.ts`](src/data/projects.ts).
+- **skills** — categorised tech stack (frontend / backend / data & infra).
+- **contact** — direct mailto + socials.
+
+## tech
+
+| Layer        | Choice                                            |
+| ------------ | ------------------------------------------------- |
+| Framework    | [Astro 4](https://astro.build) (static SSG)       |
+| Language     | TypeScript                                        |
+| Styling      | Hand-written CSS, custom design tokens            |
+| Fonts        | Inter (body) · JetBrains Mono (accents)           |
+| Hosting      | Static — deployable to Vercel, Netlify, Cloudflare Pages |
+
+No CSS framework, no component library, no client-side router. The only
+JavaScript shipped is the mobile nav toggle (~40 lines).
+
+## accessibility
+
+- WCAG AA contrast across the dark palette
+- Visible `:focus-visible` rings on all interactive elements
+- 44×44px minimum touch targets
+- `prefers-reduced-motion` respected (pulse + transforms suspend)
+- Semantic landmarks, ARIA labels on icon-only controls
+- Mobile nav with proper `aria-expanded` / `aria-controls`
+
+## getting started
 
 ```sh
-npm create astro@latest -- --template minimal
+git clone https://github.com/yaisnw/Portfolio.git
+cd Portfolio
+npm install
+npm run dev          # http://localhost:4321
 ```
 
-<!-- ASTRO:REMOVE:START -->
+| Command           | What it does                          |
+| ----------------- | ------------------------------------- |
+| `npm run dev`     | Start dev server                      |
+| `npm run build`   | Build static site to `./dist/`        |
+| `npm run preview` | Serve the production build locally    |
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/minimal)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/minimal)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/minimal/devcontainer.json)
+Requires Node `>=18.17.1`.
 
-<!-- ASTRO:REMOVE:END -->
+## structure
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
-
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
+```
+src/
+├── components/       # Astro components (Hero, About, Projects, Skills, Contact, Nav, Footer)
+├── data/
+│   └── projects.ts   # Project list — edit here to add/remove
+├── layouts/          # Base HTML shell
+├── pages/
+│   └── index.astro   # The single-page entry
+└── styles/
+    └── global.css    # Design tokens, base styles, grid background
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+To add a project, append to [`src/data/projects.ts`](src/data/projects.ts).
+Set `featured: true` to give it the green accent treatment.
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+## design tokens
 
-Any static assets, like images, can be placed in the `public/` directory.
+Defined in [`src/styles/global.css`](src/styles/global.css):
 
-## 🧞 Commands
+```css
+--bg:        #0a0e14   /* near-black canvas       */
+--bg-alt:    #0f141c   /* card surface            */
+--accent:    #7ee787   /* primary CTA / highlights */
+--accent-alt:#58a6ff   /* link colour             */
+--fg:        #e6edf3   /* primary text            */
+--fg-muted:  #8b98a9   /* secondary text          */
+```
 
-All commands are run from the root of the project, from a terminal:
+## license
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+MIT — feel free to fork, but please swap out the personal content (name,
+projects, copy) for your own.
 
-## 👀 Want to learn more?
+---
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+built by [@yaisnw](https://github.com/yaisnw) · ✉️ wafazadayasin@gmail.com
