@@ -3,7 +3,7 @@
 > personal portfolio site for a full-stack engineer based in melbourne, australia.
 > built with astro, hand-written css, and a terminal-inspired aesthetic.
 
-**live:** _coming soon_ · **stack:** astro 4 · typescript · vanilla css
+**live:** [yasinwafazada.vercel.app](https://yasinwafazada.vercel.app/) · **stack:** astro 4 · typescript · vanilla css
 
 ---
 

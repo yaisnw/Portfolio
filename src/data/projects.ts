@@ -2,7 +2,7 @@ export interface Project {
   title: string;
   description: string;
   tags: string[];
-  github: string;
+  github?: string;
   demo?: string;
   featured?: boolean;
 }
@@ -39,5 +39,11 @@ export const projects: Project[] = [
     tags: ["React", "Redux Toolkit", "Reddit JSON API"],
     github: "https://github.com/yaisnw/reddit-clone",
     demo: "https://yaisnw.github.io/reddit-clone",
+  },
+  {
+    title: "ASC — Ayendah Sazan Community",
+    description:
+      "A client project for the Ayendah Sazan community in Leeds — event tickets, event calendar, course subscriptions, and member access in one platform. Stripe-powered payments for ticket sales and recurring subscriptions, with Cloudinary image hosting.",
+    tags: ["React", "JavaScript", "Express", "MongoDB", "Stripe", "Cloudinary"],
   },
 ];
