@@ -18,7 +18,7 @@ animation-heavy marketing-page tropes.
 
 ## sections
 
-- **hero** — name, role, current build (ASC client project).
+- **hero** — name, role, and a spotlight card for a highlighted project.
 - **about** — background, stack, "at a glance" portrait card.
 - **projects** — featured work, pulled from [`src/data/projects.ts`](src/data/projects.ts).
 - **skills** — categorised tech stack (frontend / backend / data & infra).

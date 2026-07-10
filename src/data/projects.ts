@@ -9,6 +9,15 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    title: "Passerine",
+    description:
+      "A Letterboxd-style movie & TV tracker. Search the TMDB catalog, track titles with watch statuses (Plan to Watch → Completed), rate on a half-star scale with written reviews, and browse other users' reviews. NextAuth v5 auth (Google OAuth + credentials), PostgreSQL on Supabase via Prisma, Tailwind v4 + shadcn/ui, deployed on Vercel.",
+    tags: ["Next.js 16", "TypeScript", "NextAuth", "Prisma", "PostgreSQL", "Supabase", "Tailwind CSS", "TMDB API"],
+    github: "https://github.com/yaisnw/passerine",
+    demo: "https://passerine.vercel.app",
+    featured: true,
+  },
+  {
     title: "Blogging Platform",
     description:
       "Full-stack blogging platform with a Lexical rich-text editor, Google OAuth, AWS S3 image uploads, and a fully typed React 19 + Express + PostgreSQL stack. Deployed via Vercel with Docker images published to Docker Hub.",
@@ -23,7 +32,6 @@ export const projects: Project[] = [
       "Full-stack e-commerce storefront — React + Redux client with cart, checkout, and Framer Motion animations, backed by a Node/Express REST API with Passport.js + JWT auth, order processing, and bcrypt-hashed accounts. PostgreSQL on Supabase, deployed on Render.",
     tags: ["React", "Redux", "Node.js", "Express", "PostgreSQL", "Passport.js", "JWT", "Supabase"],
     github: "https://github.com/yaisnw/ecommerceclient",
-    demo: "https://ecommerceclient-15f2.onrender.com/login",
   },
   {
     title: "Jammming",
@@ -43,7 +51,7 @@ export const projects: Project[] = [
   {
     title: "ASC — Ayendah Sazan Community",
     description:
-      "A client project for the Ayendah Sazan community in Leeds — event tickets, event calendar, course subscriptions, and member access in one platform. Stripe-powered payments for ticket sales and recurring subscriptions, with Cloudinary image hosting.",
+      "A large client platform for the Ayendah Sazan community in Leeds — venue booking, event tickets and calendar, course enrolment, and sports team registrations in one place. Stripe handles two payment systems: recurring subscriptions and one-off purchases. Cloudinary image hosting. Private client repo.",
     tags: ["React", "JavaScript", "Express", "MongoDB", "Stripe", "Cloudinary"],
   },
 ];
