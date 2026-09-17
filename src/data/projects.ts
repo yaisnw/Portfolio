@@ -3,11 +3,24 @@ export interface Project {
   description: string;
   tags: string[];
   github?: string;
+  repos?: { label: string; url: string }[];
   demo?: string;
   featured?: boolean;
 }
 
 export const projects: Project[] = [
+  {
+    title: "ASC — Ayendah Sazan Community",
+    description:
+      "A large client platform for the Ayendah Sazan community in Leeds — venue booking, event tickets and calendar, course enrolment, and sports team registrations in one place. Stripe handles two payment systems: recurring subscriptions and one-off purchases. Cloudinary image hosting. Role-based access control across three tiers, TanStack Query for state management, and a full test suite with Jest and React Testing Library. CI/CD pipeline with GitHub Actions — tests and health checks run on push, Vercel deploys automatically on pass.",
+    tags: ["React", "JavaScript", "Express", "MongoDB", "Stripe", "Cloudinary", "TanStack Query", "Jest", "React Testing Library", "GitHub Actions"],
+    repos: [
+      { label: "Frontend repository", url: "https://github.com/karimhafiz/ascFront" },
+      { label: "Backend repository", url: "https://github.com/karimhafiz/ascBack" },
+    ],
+    demo: "https://asc-lac.vercel.app",
+    featured: true,
+  },
   {
     title: "Passerine",
     description:
@@ -49,9 +62,10 @@ export const projects: Project[] = [
     demo: "https://yaisnw.github.io/reddit-clone",
   },
   {
-    title: "ASC — Ayendah Sazan Community",
+    title: "notesAPI",
     description:
-      "A large client platform for the Ayendah Sazan community in Leeds — venue booking, event tickets and calendar, course enrolment, and sports team registrations in one place. Stripe handles two payment systems: recurring subscriptions and one-off purchases. Cloudinary image hosting. Private client repo.",
-    tags: ["React", "JavaScript", "Express", "MongoDB", "Stripe", "Cloudinary"],
+      "REST API built with Python, FastAPI, and PostgreSQL. Full CRUD with SQLModel ORM.",
+    tags: ["Python", "FastAPI", "PostgreSQL", "SQLModel"],
+    github: "https://github.com/yaisnw/notesApi",
   },
 ];
