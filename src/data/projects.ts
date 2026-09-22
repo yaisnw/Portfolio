@@ -70,6 +70,13 @@ export const projects: Project[] = [
     demo: "https://cover-letter-generator-yasin.vercel.app",
   },
   {
+    title: "Uptime Monitor",
+    description:
+      "A lightweight service monitoring API that checks the uptime and response times of external services concurrently, with httpx handling the concurrent requests. Currently watching GitHub, Stripe, Cloudinary, Supabase, Vercel, and MongoDB Atlas.",
+    tags: ["Python", "FastAPI", "httpx"],
+    github: "https://github.com/yaisnw/uptime-monitor",
+  },
+  {
     title: "notesAPI",
     description:
       "REST API built with Python, FastAPI, and PostgreSQL. Full CRUD with SQLModel ORM.",
