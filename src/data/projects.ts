@@ -10,9 +10,9 @@ export interface Project {
 
 export const projects: Project[] = [
   {
-    title: "ASC — Ayendah Sazan Community",
+    title: "ASC - Ayendah Sazan Community",
     description:
-      "A large client platform for the Ayendah Sazan community in Leeds — venue booking, event tickets and calendar, course enrolment, and sports team registrations in one place. Stripe handles two payment systems: recurring subscriptions and one-off purchases. Cloudinary image hosting. Role-based access control across three tiers, TanStack Query for state management, and a full test suite with Jest and React Testing Library. CI/CD pipeline with GitHub Actions — tests and health checks run on push, Vercel deploys automatically on pass.",
+      "A client platform for the Ayendah Sazan community in Leeds, combining venue booking, event tickets, course enrolment, and sports team registration. Stripe handles both subscriptions and one-off payments, with three-tier role-based access control. Fully tested, with a GitHub Actions pipeline that deploys to Vercel when tests pass.",
     tags: ["React", "JavaScript", "Express", "MongoDB", "Stripe", "Cloudinary", "TanStack Query", "Jest", "React Testing Library", "GitHub Actions"],
     repos: [
       { label: "Frontend repository", url: "https://github.com/karimhafiz/ascFront" },
@@ -45,6 +45,13 @@ export const projects: Project[] = [
       "Full-stack e-commerce storefront — React + Redux client with cart, checkout, and Framer Motion animations, backed by a Node/Express REST API with Passport.js + JWT auth, order processing, and bcrypt-hashed accounts. PostgreSQL on Supabase, deployed on Render.",
     tags: ["React", "Redux", "Node.js", "Express", "PostgreSQL", "Passport.js", "JWT", "Supabase"],
     github: "https://github.com/yaisnw/ecommerceclient",
+  },
+  {
+    title: "GitHub Analyser",
+    description:
+      "An AI agent that reads a public GitHub repository and writes a plain-text analysis of it. Gemini runs a tool-calling loop, choosing which files to read, fetching them in parallel from the GitHub REST API, and stopping once it has enough context to explain what the project is and how it's built. Built to run on the free tier: requests are spaced to respect Gemini's rate limits, large files are trimmed, failed file reads go back to the model instead of ending the run, and each failure type returns its own error message.",
+    tags: ["Next.js 16", "React 19", "TypeScript", "Tailwind CSS", "Gemini API", "GitHub REST API"],
+    github: "https://github.com/yaisnw/github-analyser",
   },
   {
     title: "Jammming",
