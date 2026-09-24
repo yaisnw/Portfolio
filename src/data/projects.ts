@@ -52,6 +52,7 @@ export const projects: Project[] = [
       "An AI agent that reads a public GitHub repository and writes a plain-text analysis of it. Gemini runs a tool-calling loop, choosing which files to read, fetching them in parallel from the GitHub REST API, and stopping once it has enough context to explain what the project is and how it's built. Built to run on the free tier: requests are spaced to respect Gemini's rate limits, large files are trimmed, failed file reads go back to the model instead of ending the run, and each failure type returns its own error message.",
     tags: ["Next.js 16", "React 19", "TypeScript", "Tailwind CSS", "Gemini API", "GitHub REST API"],
     github: "https://github.com/yaisnw/github-analyser",
+    demo: "https://github-analyser-vert.vercel.app",
   },
   {
     title: "Jammming",
